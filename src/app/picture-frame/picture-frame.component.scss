@@ -1,0 +1,9 @@
+.picture-frame-container {
+    display: flex;
+    
+    .picture-frame {
+        flex-direction: row;
+        flex-grow: 4;
+        
+    }
+}

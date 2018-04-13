@@ -1,0 +1,52 @@
+{
+    "cookbookTypes": [
+        {
+            "id": "Family_Heirloom",
+            "image": "assets/images/heirloom.png",
+            "description": "Family Heirloom",
+            "label": "Family Heirloom"
+        },
+        {
+            "id": "Bridal_Shower",
+            "image": "assets/images/bridal.png",
+            "description": "Bridal Shower",
+            "label": "Bridal Shower"
+        },
+        {
+            "id": "Fundraiser",
+            "image": "assets/images/fund.png",
+            "description": "Fundraiser",
+            "label": "Fundraiser"
+        },
+        {
+            "id": "Resellers",
+            "image": "assets/images/reseller.png",
+            "description": "Resellers",
+            "label": "Resellers"
+        },
+        {
+            "id": "Corporate",
+            "image": "assets/images/team.png",
+            "description": "Corporate",
+            "label": "Corporate"
+        },
+        {
+            "id": "Personal",
+            "image": "assets/images/personal.png",
+            "description": "Personal",
+            "label": "Personal"
+        },
+        {
+            "id": "Military_Spouse",
+            "image": "assets/images/mil.png",
+            "description": "Military Support",
+            "label": "Military Support"
+        },
+        {
+            "id": "Class_Reunion",
+            "image": "assets/images/reunion.png",
+            "description": "Class Reunion",
+            "label": "Class Reunion"
+        }
+    ]
+}
