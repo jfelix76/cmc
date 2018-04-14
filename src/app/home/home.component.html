@@ -1,0 +1,19 @@
+<div class="home-container">
+  <div class="intro">
+    <intro></intro>
+  </div>
+  
+  <div class="body">  
+    <div class="grid-items">
+      <div class="grid-item"  *ngFor="let type of cookbookTypes">
+        <picture-frame
+          [id]="type.id"
+          [image]="type.image"
+          [label]="type.label"
+          [description]="type.description"
+          (click)="goToProfile()">
+        </picture-frame>
+      </div>   
+    </div>
+  </div>
+</div>

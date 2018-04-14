@@ -1,0 +1,14 @@
+@import '../../styles.scss';
+@import '../../../node_modules/bourbon-neat/app/assets/stylesheets/_neat.scss';
+
+.intro-container {
+    padding: 0;
+    margin: 0;
+
+    p {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-family: "Open Sans";
+        font-size: 20px;
+    }
+}

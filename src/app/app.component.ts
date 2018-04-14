@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +9,5 @@ import { Http } from '@angular/http';
 })
 export class AppComponent {
 
-  cookbookTypes: any;
-
-  constructor(public http: Http) {}
-
-  ngOnInit() {
-    this.http.get('assets/home-page.json')
-      .subscribe((data) => {
-        this.cookbookTypes = data.json()['cookbookTypes'];
-        console.log('cookbooks', this.cookbookTypes);
-      });
-  }
+  
 }

@@ -1,9 +1,45 @@
+@import '../../styles.scss';
+@import '../../../node_modules/bourbon-neat/app/assets/stylesheets/_neat.scss';
+
 .picture-frame-container {
-    display: flex;
     
     .picture-frame {
-        flex-direction: row;
-        flex-grow: 4;
-        
+        padding: 10px;
+        img {
+            display: block;
+            height: 120px;
+            margin: 0 auto 1em;
+        }
+
+        .label-description {
+            position: absolute;
+            padding-left: 10px;
+            
+            h3 {
+                position: relative;
+                top: -80px;
+            }
+            
+            p {
+                position: relative;
+                top: -100px;
+            }
+        }
+
+        // h1 {
+        //     color: $grid-item-color;
+        //     font-size: 1.3em;
+        //     margin-bottom: 0.4em;
+        // }
+
+        // p {
+        //     color: transparentize($grid-item-color, 0.3);
+        //     line-height: 1.5em;
+        //     margin: auto;
+
+        //     @include media($medium-screen) {
+        //     max-width: 70%;
+        //     }
+        // }
     }
 }
