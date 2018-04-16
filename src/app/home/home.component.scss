@@ -2,22 +2,25 @@
 @import '../../../node_modules/bourbon-neat/app/assets/stylesheets/_neat.scss';
 
 .home-container {
-    .intro {
-        background-color: rgba(89,89,89,.20);
-        border-top: solid 1px white;
-        border-bottom: solid 1px white;
-
-        intro {
-            max-width: 80%;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+    
     .body {
         align-content: center;
         background-image: url('/assets/images/fc-background.png');
         background-repeat: no-repeat;
         background-size: cover;
+
+        .intro {
+            padding-top: 150px;
+            background-color: rgba(89,89,89,.20);
+            border-top: solid 1px white;
+            border-bottom: solid 1px white;
+
+            intro {
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+        }
     }
 
     .light-back {
@@ -26,57 +29,57 @@
         align-content: center;
     }
     
-        .grid-items {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
+    .grid-items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+        @include clearfix;
+
+        picture-frame {
+            flex-direction: row;
+            max-width: 50%;
             
-            @include clearfix;
-
-            picture-frame {
+            .grid-item {
                 flex-direction: row;
-                max-width: 50%;
-                
-                .grid-item {
-                    flex-direction: row;
-                    background: $grid-item-background;
-                    border-bottom: $grid-item-border-size solid $grid-items-background;
-                    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
-                    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
-                    border-top: 0;
-                    cursor: pointer;
-                    float: left;
-                    height: $grid-item-height;
-                    outline: none;
-                    overflow: hidden;
-                    padding: 2em;
-                    text-align: center;
-                    text-decoration: none;
-                    transition: all 0.2s ease-in-out;
-                    width: 100%;
+                background: $grid-item-background;
+                border-bottom: $grid-item-border-size solid $grid-items-background;
+                border-left: ($grid-item-border-size / 2) solid $grid-items-background;
+                border-right: ($grid-item-border-size / 2) solid $grid-items-background;
+                border-top: 0;
+                cursor: pointer;
+                float: left;
+                height: $grid-item-height;
+                outline: none;
+                overflow: hidden;
+                padding: 2em;
+                text-align: center;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+                width: 100%;
 
-                    @include media($large-screen) {
-                        @include grid-item-columns($grid-item-columns);
-                    }
+                @include media($large-screen) {
+                    @include grid-item-columns($grid-item-columns);
+                }
 
-                    @for $i from 1 through length($grid-item-colors) { 
-                    // assign colors from $grid-item-colors list
-                    &:nth-child(#{$i}) {
-                        $background-from-list: nth($grid-item-colors, $i);
-                        background-color: $background-from-list;
-                        box-shadow: inset 0 0 1px 2px darken($background-from-list, 10%);
+                @for $i from 1 through length($grid-item-colors) { 
+                // assign colors from $grid-item-colors list
+                &:nth-child(#{$i}) {
+                    $background-from-list: nth($grid-item-colors, $i);
+                    background-color: $background-from-list;
+                    box-shadow: inset 0 0 1px 2px darken($background-from-list, 10%);
 
-                        &:focus,
-                        &:hover {
-                            background-color: darken($background-from-list, 15%);
-                            background-position: top;
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                        }
+                    &:focus,
+                    &:hover {
+                        background-color: darken($background-from-list, 15%);
+                        background-position: top;
+                        background-repeat: no-repeat;
+                        background-size: cover;
                     }
                 }
             }
+        }
         
     }
 
